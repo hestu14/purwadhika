@@ -11,3 +11,5 @@ console.log(typeof jomblo);
 
 console.log(typeof kerja);
 console.log(kerja);
+
+console.log(typeof null);
