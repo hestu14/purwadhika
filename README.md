@@ -25,8 +25,8 @@ Anda akan belajar selama 6 bulan melalui sesi kelas bagaimana membangun aplikasi
 
 ### Rencana Jadwal Belajar dan Ujian
 
-- 8 Maret 2020:     Silabus 1 - 6
-- 15 Maret 2020:    Silabus 6 - 9
-- 22 Maret 2020:    Silabus 9 - 11
-- 29 Maret 2020:    Silabus 11 - 14
+- 8 Maret 2020
+- 15 Maret 2020
+- 22 Maret 2020
+- 29 Maret 2020
 - 5 April 2020:     Ujian Fundamental Programming menggunakan JavaScript
