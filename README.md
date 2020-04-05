@@ -23,10 +23,3 @@ Anda akan belajar selama 6 bulan melalui sesi kelas bagaimana membangun aplikasi
 13. Github
 14. Markdown
 
-### Rencana Jadwal Belajar dan Ujian
-
-- 8 Maret 2020
-- 15 Maret 2020
-- 22 Maret 2020
-- 29 Maret 2020
-- 5 April 2020:     Ujian Fundamental Programming menggunakan JavaScript
