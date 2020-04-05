@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="a1" type="checkbox" onclick="fungsiKu1(this.value)" value="Pria"> Pria
+    <input id="a2" type="checkbox" onclick="fungsiKu1(this.value)" value="Wanita"> Wanita
+    <br><br>
+    <button id="klikini" onclick="fungsiKu2(this.value)"> klik
+    </button>
+    <p id="output"></p>
+
+    <script>
+        function fungsiKu1(x) {
+
+            let a1_checked = document.getElementById("a1").checked;
+            let a2_checked = document.getElementById("a2").checked;
+
+            if (a1_checked == true && a2_checked == false) {
+                document.getElementById("klikini").value = 'Pria'
+            } else if (a1_checked == false && a2_checked == true) {
+                document.getElementById("klikini").value = 'Wanita'
+            } else if (a1_checked == true && a2_checked == true) {
+                document.getElementById("klikini").value = 'Pria & Wanita '
+            } else {
+                document.getElementById("klikini").value = ''
+            }
+        }
+
+        function fungsiKu2(y) {
+            document.getElementById("output").innerHTML = y
+        }
+    </script>
+
+</body>
+
+</html>

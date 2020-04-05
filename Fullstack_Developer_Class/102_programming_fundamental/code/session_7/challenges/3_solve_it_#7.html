@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="myForm" onsubmit="return false">
+        Masukan Angka 1:<br><br>
+        <input type="number" name="angka1">
+        <br>
+        <br>
+
+        Masukan Angka 2:<br><br>
+        <input type="number" name="angka2">
+        <br>
+        <br>
+
+        <button id="kuadratkan"
+            onclick="hitung(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Pangkatkan</button>
+        <br>
+        <br>
+
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitung(angka, pangkat) {
+            let output = angka ** pangkat;
+            document.getElementById('hasil').innerHTML = `<b>Hasil ${angka}<sup>${pangkat}</sup> = ${output}`;
+        }
+    </script>
+
+</body>
+
+</html>

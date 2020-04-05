@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form name="myForm" onsubmit="return false">
+        Masukan Angka 1:<br><br>
+        <input type="number" name="angka1">
+        <br>
+        <br>
+
+        Masukan Angka 2:<br><br>
+        <input type="number" name="angka2">
+        <br>
+        <br>
+
+        <button
+            onclick="diKali(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Kali
+            x</button>
+        <button
+            onclick="diBagi(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Bagi
+            :</button>
+        <button
+            onclick="diTambah(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Tambah
+            +</button>
+        <button
+            onclick="diKurang(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Kurang
+            -</button>
+        <button
+            onclick="diModulus(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Modulus
+            %</button>
+        <button
+            onclick="diPangkatkan(document.forms['myForm']['angka1'].value, document.forms['myForm']['angka2'].value)">Pangkat
+            ^</button>
+
+        <br>
+        <br>
+
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        function diKali(angka1, angka2) {
+            let output = angka1 * angka2;
+            document.getElementById('hasil').innerHTML = `<b>${angka1} x ${angka2} = ${output}`;
+        }
+
+        function diBagi(angka1, angka2) {
+            let output = angka1 / angka2;
+            document.getElementById('hasil').innerHTML = `<b>${angka1} : ${angka2} = ${output}`;
+        }
+
+        function diTambah(angka1, angka2) {
+            let output = parseInt(angka1) + parseInt(angka2);
+            document.getElementById('hasil').innerHTML = `<b>${angka1} + ${angka2} = ${output}`;
+        }
+
+        function diKurang(angka1, angka2) {
+            let output = angka1 - angka2;
+            document.getElementById('hasil').innerHTML = `<b>${angka1} - ${angka2} = ${output}`;
+        }
+
+        function diModulus(angka1, angka2) {
+            let output = angka1 % angka2;
+            document.getElementById('hasil').innerHTML = `<b>${angka1} % ${angka2} = ${output}`;
+        }
+
+        function diPangkatkan(angka1, angka2) {
+            let output = angka1 ** angka2;
+            document.getElementById('hasil').innerHTML = `<b>${angka1}<sup>${angka2}</sup> = ${output}`;
+        }
+    </script>
+
+
+</body>
+
+</html>

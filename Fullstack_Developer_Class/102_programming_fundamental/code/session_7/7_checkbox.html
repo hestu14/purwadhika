@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input id="a1" type="checkbox" onclick="fungsiKu1(this.value)" value="Pria"> Pria
+    <br>
+    <p id="output"></p>
+    <script>
+        function fungsiKu1(y) {
+            if (document.getElementById("a1").checked == true) {
+                document.getElementById("output").innerHTML = y
+            } else {
+                document.getElementById("output").innerHTML = ''
+            }
+        }
+    </script>
+
+</body>
+
+</html>

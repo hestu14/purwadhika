@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form name="myForm" onsubmit="return false">
+        Ketik Kalimat:<br><br>
+        <input type="text" name="kalimat">
+        <br>
+        <br>
+
+        Karakter yang dicari:<br><br>
+        <input type="text" name="cariKarakter">
+        <br>
+        <br>
+
+        <button id="kuadratkan"
+            onclick="hitung(document.forms['myForm']['kalimat'].value, document.forms['myForm']['cariKarakter'].value)">Pangkatkan</button>
+        <br>
+        <br>
+
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitung(kalimat, cariKarakter) {
+            let x = kalimat.split(cariKarakter).length - 1;
+            let output = `<b>Jumlah '${cariKarakter}' sebanyak ${x} buah<b>`;
+            document.getElementById('hasil').innerHTML = output;
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form onsubmit="return false">
+        Name: <input name="name" type="text">
+        <br><br>
+        Age: <input name="age" type="number">
+        <br><br>
+        Gender: <input name="gender" type="radio" value="Pria">Pria
+        <input name="gender" type="radio" value="Wanita">Wanita
+        <br><br>
+        <button id="submit" onclick="submitForm()">Coba Klik!</button>
+    </form>
+
+    <br>
+    <br>
+    <p id="formResult">
+
+    </p>
+
+    <script>
+        function submitForm() {
+            let name = document.getElementsByName('name')[0].value;
+            let age = document.getElementsByName('age')[0].value;
+            let gender = document.getElementsByName('gender')[0].value;
+            let output = `Name: ${name}<br>Age: ${age}<br>Gender: ${gender}`
+
+            document.getElementById('formResult').innerHTML = output;
+            console.log(output.split('<br>').join('\n'));
+        }
+    </script>
+
+</body>
+
+</html>

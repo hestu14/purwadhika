@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="radio" name="sex1" onclick="fungsiKu2(this.value)" value="Pria"> Pria
+    <input type="radio" name="sex2" onclick="fungsiKu2(this.value)" value="Wanita">Wanita
+
+
+    <!-- <input type="radio" name="sex" onclick="fungsiKu2(this.value)" value="Pria"> Pria
+    <input type="radio" name="sex" onclick="fungsiKu2(this.value)" value="Wanita">Wanita -->
+
+
+    <p id="output"></p>
+
+    <script>
+        function fungsiKu2(y) {
+            document.getElementById("output").innerHTML = y
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Referensi -->
+    <!-- https://www.w3schools.com/js/js_validation.asp -->
+
+    <form name="myForm" onsubmit="return false">
+        Masukan Angka:<br><br>
+        <input type="number" name="angka">
+        <br>
+        <br>
+        <button id="kuadratkan" onclick="hitung(document.forms['myForm']['angka'].value)">Kuadratkan</button>
+        <br>
+        <br>
+
+    </form>
+
+    <p id="hasil"></p>
+
+    <script>
+        function hitung(angka) {
+            //let angka = document.getElementByName('angka')[0].value;
+            let output = angka ** 2;
+            document.getElementById('hasil').innerHTML = `<b>Hasil ${angka}<sup>2</sup> = ${output}`;
+        }
+    </script>
+
+</body>
+
+</html>

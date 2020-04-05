@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <p>Nama: <input type="text">
+            <p>Usia: <input type="number">
+    </form>
+    <button onclick="fungsiKu()"> Coba klik! </button>
+    <p id="tes"> Hasil </p>
+    <script>
+        function fungsiKu() {
+            let input1 =
+                document.getElementById("form").elements[0].value;
+            let input2 =
+                document.getElementById("form").elements[1].value;
+            document.getElementById("tes").innerHTML = input1 + ',' + input2 + ' tahun ';
+        }
+    </script>
+</body>
+
+</html>
