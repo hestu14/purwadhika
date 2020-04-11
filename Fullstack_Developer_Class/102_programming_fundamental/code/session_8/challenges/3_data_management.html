@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 2px solid blue;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        span {
+            font-style: italic;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3 id="formTitle">Tambah Data</h3>
+    <form name="formPeserta" onsubmit="return handleFormSubmit(this)">
+        <input type="hidden" name="mode" value="add">
+
+        <table>
+            <tr>
+                <td>ID Peserta:</td>
+                <td><input type="number" name="id" required="required"></td>
+            </tr>
+            <tr>
+                <td>Nama Peserta:</td>
+                <td><input type="text" name="name" required="required"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>S A V E</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <br>
+    <br>
+
+    <button onclick="resetForm()">Tambah Data Peserta</button>
+    <br>
+    <br>
+    <table id="tabelDaftarPeserta">
+        <tr>
+            <th>No.</th>
+            <th>Avatar</th>
+            <th>ID Peserta</th>
+            <th>Nama Peserta</th>
+            <th>Aksi</th>
+        </tr>
+    </table>
+
+    <script>
+        function resetForm() {
+
+            let form = document.forms['formPeserta'];
+            form.reset();
+            form['mode'].value = 'add';
+
+            document.getElementById('formTitle').innerHTML = 'Tambah Data';
+
+        }
+
+        function handleFormSubmit(formObj) {
+
+            let mode = formObj['mode'].value;
+            let id = formObj['id'].value;
+            let name = formObj['name'].value;
+
+            let isSuccess = false;
+
+            if (mode === 'add') {
+                isSuccess = dataManagement.add(new Peserta(id, name));
+            }
+
+            if (mode === 'modify') {
+                isSuccess = dataManagement.modify(new Peserta(id, name));
+            }
+
+            if (isSuccess) {
+                dataManagement.refreshTable();
+            }
+
+            return false;
+        }
+
+        function loadDataToForm(idPeserta) {
+
+            let form = document.forms['formPeserta'];
+            document.getElementById('formTitle').innerHTML = 'Ubah Data';
+
+            let totalData = database.length;
+            let foundIndex = null;
+
+            // cari data dengan id peserta tertentu
+            for (let i = 0; i < totalData; i++) {
+                if (database[i].id == idPeserta) {
+                    foundIndex = i;
+                    break;
+                }
+            }
+
+            if (foundIndex !== null) {
+                form['mode'].value = 'modify';
+                form['id'].value = database[foundIndex].id;
+                form['name'].value = database[foundIndex].name;
+            }
+        }
+
+        class Peserta {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+        }
+
+        let database = [
+            new Peserta('130301200108001', 'Bastian Firmansyah'),
+            new Peserta('130301200108002', 'Adhitya Bagus Prakoso'),
+            new Peserta('130301200108003', 'Muhammad Ihsan'),
+            new Peserta('130301200108004', 'Fikri Harjo'),
+            new Peserta('130301200108005', 'Hestu Prasetya'),
+            new Peserta('130301200108006', 'Nur Rizqia Sukmadhani')
+        ];
+
+        class DataManagement {
+
+            constructor() {}
+
+            add(peserta) {
+
+                // memastikan parameter seusia dengan object peserta
+                if (peserta instanceof Peserta === false) {
+                    alert('Object peserta tidak valid.');
+                    return false;
+                }
+
+                let totalData = database.length;
+                let valid = true;
+
+                // check apakah id peserta sudah pernah ada
+                for (let i = 0; i < totalData; i++) {
+                    if (database[i].id === peserta.id) {
+                        valid = false;
+                        break;
+                    }
+                }
+
+                if (valid === false) {
+                    alert('Data ID Peserta sudah ada, silahkan gunakan ID yang lain.');
+                    return false;
+                }
+
+                database.push(peserta);
+
+                return true;
+            }
+
+            modify(peserta) {
+
+                let totalData = database.length;
+                let foundIndex = null;
+
+                // cari data dengan id peserta tertentu
+                for (let i = 0; i < totalData; i++) {
+                    if (database[i].id == peserta.id) {
+                        foundIndex = i;
+                        break;
+                    }
+                }
+
+                if (foundIndex !== null) {
+                    database[foundIndex] = peserta;
+                    return true;
+                }
+
+                return false;
+            }
+
+            hapus(idPeserta) {
+
+                let totalData = database.length;
+                let deleteIndex = null;
+
+                // cari data dengan id peserta tertentu
+                for (let i = 0; i < totalData; i++) {
+                    if (database[i].id == idPeserta) {
+                        deleteIndex = i;
+                        break;
+                    }
+                }
+
+                if (deleteIndex === null) {
+                    alert(`Data dengan ID peserta ${idPeserta} tidak ditemukan.`);
+                    return false;
+                }
+
+                if (confirm(`Apakah Anda yakin akan menghapus data dengan ID ${idPeserta}`)) {
+
+                    database.splice(deleteIndex, 1);
+                    this.refreshTable();
+                    return true;
+                }
+
+                return false;
+            }
+
+            refreshTable() {
+
+                // Find a <table> element with id="daftarPeserta":
+                let tabelDaftarPeserta = document.getElementById('tabelDaftarPeserta');
+                let rowNumber = 1;
+                let totalData = database.length;
+
+                // Clean up table
+                let totalRows = tabelDaftarPeserta.rows.length;
+
+                for (let i = 1; i < totalRows; i++) {
+                    // kenapa indexnya selalu satu
+                    // karena ketika row dihapus maka urutan index row akan bermodify atau ke reset kembali mulai dari 1
+                    tabelDaftarPeserta.deleteRow(1);
+                }
+
+                for (let i = 0; i < totalData; i++) {
+
+                    let peserta = database[i];
+
+                    // Create an empty <tr> element and add it to the 1st position of the table:
+                    let row = tabelDaftarPeserta.insertRow(rowNumber);
+
+                    // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    var cell5 = row.insertCell(4);
+
+                    // Add some text to the new cells:
+                    cell1.innerHTML = rowNumber;
+                    cell2.innerHTML = `<image src="https://ui-avatars.com/api/?name=${peserta.name}&length=3">`;
+                    cell3.innerHTML = peserta.id;
+                    cell4.innerHTML = peserta.name;
+
+                    cell5.style.textAlign = "center";
+                    cell5.innerHTML =
+                        `<button onclick='loadDataToForm(${peserta.id})'>Edit</button><br><button onclick='dataManagement.hapus(${peserta.id})'>Delete</button>`;
+
+                    rowNumber++;
+
+                }
+
+            }
+
+        }
+
+        let dataManagement = new DataManagement();
+        dataManagement.refreshTable();
+    </script>
+
+</body>
+
+</html>

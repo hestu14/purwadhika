@@ -27,13 +27,16 @@
     </p>
 
     <script>
+
         function submitForm() {
             let name = document.getElementsByName('name')[0].value;
             let age = document.getElementsByName('age')[0].value;
             let gender = document.getElementsByName('gender')[0].value;
+            
             let output = `Name: ${name}<br>Age: ${age}<br>Gender: ${gender}`
 
             document.getElementById('formResult').innerHTML = output;
+            
             console.log(output.split('<br>').join('\n'));
         }
     </script>

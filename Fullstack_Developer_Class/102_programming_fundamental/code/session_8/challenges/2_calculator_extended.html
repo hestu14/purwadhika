@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 30px;
+        }
+
+        table#calculatorNumpad td {
+            padding: 10px;
+            border: 1px solid gray;
+            text-align: center;
+            width: 40px;
+        }
+
+        table#calculatorNumpad td:hover {
+            padding: 10px;
+            border: 1px solid red;
+            background-color: gray;
+            cursor: pointer;
+            width: 40px;
+        }
+
+        span#calculatorFormulaDisplay {
+            font-size: 20px;
+        }
+
+        span#calculatorResult {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+
+        <table width="500">
+            <tr>
+                <td align="right"><span id="calculatorFormulaDisplay">13 + 10 =</span></td>
+            </tr>
+            <tr align="right">
+                <td><span id="calculatorResult">100</span></td>
+            </tr>
+        </table>
+        <table id="calculatorNumpad" width="500">
+            <tr>
+                <td id="cal_satu_per_x">1/x</td>
+                <td id="cal_angka_2">x<sup>2</sup></td>
+                <td id="cal_dua_akar"><sup>2</sup>&radic;x</td>
+                <td id="cal_operator_bagi">/</td>
+            </tr>
+
+            <tr>
+                <td id="cal_angka_7">7</td>
+                <td id="cal_angka_8">8</td>
+                <td id="cal_angka_9">9</td>
+                <td id="cal_operator_kali">x</td>
+            </tr>
+            <tr>
+                <td id="cal_angka_4">4</td>
+                <td id="cal_angka_5">5</td>
+                <td id="cal_angka_6">6</td>
+                <td id="cal_operator_kurang">-</td>
+            </tr>
+            <tr>
+                <td id="cal_angka_1">1</td>
+                <td id="cal_angka_2">2</td>
+                <td id="cal_angka_3">3</td>
+                <td id="cal_operator_tambah">+</td>
+            </tr>
+            <tr>
+                <td id="cal_operator_modulus">%</td>
+                <td id="cal_angka_0">0</td>
+                <td id="cal_decimal">.</td>
+                <td id="cal_hitung" onclick="calculator.hitung">=</td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        var calculator = {
+
+            sequences: [],
+
+            calculatorDisplay: '',
+            calculatorResult: 0,
+
+            input: function (numberOrOperator) {
+                sequences.push(numberOrOperator);
+                this.display();
+                this.hitung();
+            },
+
+            display: function () {
+                let calculatorDisplay = this.sequences.join(' ');
+                document.getElementById('calculatorDisplay').innerHTML = calculatorDisplay;
+            },
+
+            hitung: function () {
+                let sequences = this.sequences;
+                let total = 0;
+
+                for (let i = 0; i < sequences.length; i++) {
+
+                    let item = sequences[i];
+                    let number = 0;
+
+                    if (parseInt(item) > 0) {
+
+                        number = parseInt(item);
+
+                    } else {
+
+                        switch (item) {
+                            case '+':
+                                break;
+                            case '-':
+                                break;
+                            case 'x':
+                                break;
+                            case '/':
+                                break;
+                            case '%':
+                                break;
+
+                        }
+
+                    }
+                }
+            },
+
+            dikali: function (angka1, angka2) {
+
+            }
+
+        };
+    </script>
+</body>
+
+</html>
