@@ -18,8 +18,9 @@ Anda akan belajar selama 6 bulan melalui sesi kelas bagaimana membangun aplikasi
 8. Object
 9. JavaScript ES6
 10. Algorithms
-11. Data Structure
+
 12. Git
 13. Github
 14. Markdown
 
+11. Data Structure
