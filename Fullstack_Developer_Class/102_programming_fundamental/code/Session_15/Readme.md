@@ -4,8 +4,6 @@
 
 ## **Soal 1 - Jam Dunia**
 
----
-
 Buatlah tampilan sederhana jam dunia untuk 10 zona waktu, dengan memanfaatkan method `setInterval()` dan object `Date()`. Selisih antar zona waktu adalah 1 jam, 1 menit & 1 detik.
 
 ![Jam_Dunia](./contoh_soal_ke_1-min.gif)
@@ -13,8 +11,6 @@ Buatlah tampilan sederhana jam dunia untuk 10 zona waktu, dengan memanfaatkan me
 > _**Catatan:**_ _Commit dan push jawaban soal pertama ke akun Github Anda dengan nama repo: **Jam_Dunia**. Sertakan link url repo Github Anda. Kemudian kirimkan via email ke fredhopelane@gmail.com dengan subject email: **JS-Soal1-namaAnda**._
 
 ## **Soal 2 - Kategori Bilangan**
-
----
 
 Buatlah sebuah __file JavaScript__ yang mengandung **sebuah return function (dengan 1 parameter)** untuk menentukan kategori bilangan sebuah angka. Misal: angka __13__ tergolong bilangan __*bulat*__, **_cacah_**, *__asli__*, **_ganjil_** & __*prima*__. Berikut adalah definisi & pengkategorian bilangan menurut laman Wikipedia [(klik di sini)](https://id.wikipedia.org/wiki/Bilangan):
 
@@ -57,8 +53,6 @@ Contoh screenshot
 > _**Catatan:**_ _Commit dan push jawaban soal kedua ke akun Github Anda dengan nama repo: **Kategori_Bilangan**. Sertakan link url repo Github Anda. Kemudian kirimkan via email ke fredhopelane@gmail.com dengan subject email: **JS-Soal2-namaAnda**._
 
 ## **Soal 3 - Data Tabel**
-
----
 
 Buatlah sebuah **file HTML** yang mengandung **script JavaScript**, yang dapat memproses input dari user kemudian menampilkannya dalam bentuk tabel, mensortir data berdasarkan properti tertentu & menghapus data tertentu.
 
