@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jam Dunia</title>
+    <style>
+        table {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Jam Dunia</h1>
+        <table id="worldClock"></table>
+        <h2>Selisih antar zona waktu = 1 jam, 1 menit, 1 detik</h2>
+    </center>
+
+    <script>
+        let worldClockTable = document.getElementById("worldClock");
+
+        // You can set any cities as long within timezone
+        // from UTC+0 to UTC+9 pick you favourite cities :-)
+        // https://time.is/time_zones
+        let cityAndCountries = [
+            'London, Inggris',
+            'Paris, Perancis',
+            'Istanbul, Turki',
+            'Moskow, Rusia',
+            'Abu Dhabi, UEA',
+            'Islamabad, Pakistan',
+            'Astana, Kazakhstan',
+            'Jakarta, Indonesia',
+            'Beijing, China',
+            'Tokyo, Jepang',
+        ];
+
+        function refreshWorldClock() {
+
+            let date = new Date();
+            let year = date.getUTCFullYear();
+            let month = date.getUTCMonth();
+            let day = date.getUTCDay();
+            let hour = date.getUTCHours();
+            let minute = date.getUTCMinutes();
+            let second = date.getUTCSeconds();
+
+            let totalRows = worldClockTable.rows.length;
+
+            // Clean up table
+            for (let i = 0; i < totalRows; i++) {
+                // kenapa indexnya selalu nol
+                // karena ketika row dihapus maka urutan index row akan ke reset kembali mulai dari 0
+                worldClockTable.deleteRow(0);
+            }
+
+            for (let i = 0; i <= 9; i++) {
+
+                // valid value
+                //let baseUtc = new Date(Date.UTC(year, month, day, hour + i, minute, second));
+
+                // just for test
+                let baseUtc = new Date(Date.UTC(year, month, day, hour + i, minute + i, second + i));
+
+                let row = worldClockTable.insertRow(i);
+
+                // Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+                cell1.innerHTML =
+                    `${baseUtc.getUTCHours().toString().padStart(2, '0')}:${baseUtc.getUTCMinutes().toString().padStart(2, '0')}:${baseUtc.getUTCSeconds().toString().padStart(2,'0')} *`;
+                cell2.innerHTML = `GMT+${i} ${cityAndCountries[i]}`;
+            }
+
+        }
+
+        setInterval(refreshWorldClock, 60);
+    </script>
+
+</body>
+
+</html>
