@@ -33,9 +33,9 @@
     <center>
         <form name="formPeserta" onsubmit="return handleFormSubmit(this)">
 
-            ID Peserta:
+            Nama:
             <input type="text" name="nama" required="required">
-            Nama Peserta:
+            Tanggal Lahir:
             <input type="date" name="tanggalLahir" required="required">
             Kota:
             <input type="text" name="kota" required="required">
@@ -201,7 +201,9 @@
             constructor(nama, tglLahir, kota) {
                 this.nama = nama;
                 this.tanggalLahir = tglLahir;
+                
                 this.usia = (new Date).getFullYear() - (new Date(tglLahir)).getFullYear();
+
                 this.pensiun = this.usia - 55;
                 this.kota = kota;
                 this.zodiak = this.getZodiacName(tglLahir);
@@ -210,6 +212,8 @@
             getZodiacName(birthDate) {
                 let date = new Date(birthDate);
                 let simpleDate = parseInt((date.getMonth() + 1).toString() + date.getDate().toString());
+                // 112
+                // 924
 
                 let zodiacName = '';
                 let zodiacTropis = [{
@@ -286,6 +290,7 @@
         let database = [
             new Peserta('Budi', '01/12/1986', 'Ambon'),
             new Peserta('Deni', '09/24/1985', 'Palu'),
+            { nama: 'Freddy', }
         ];
 
         class DataManagement {
@@ -309,7 +314,7 @@
 
             add(peserta) {
 
-                // memastikan parameter seusia dengan object peserta
+                // memastikan parameter sesuai dengan object peserta
                 if (peserta instanceof Peserta === false) {
                     alert('Object peserta tidak valid.');
                     return false;
