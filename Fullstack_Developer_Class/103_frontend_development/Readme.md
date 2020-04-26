@@ -53,3 +53,4 @@
 - Explanation CSS Float vs. Flex vs. Grid
   - [https://www.youtube.com/watch?v=hYJvxsgnGMA](https://www.youtube.com/watch?v=hYJvxsgnGMA)
   - [https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s](https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s)
+- CSS In-Depth, v2 [https://frontendmasters.com/courses/css-in-depth-v2/](https://frontendmasters.com/courses/css-in-depth-v2/)
