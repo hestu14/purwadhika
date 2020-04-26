@@ -1,0 +1,41 @@
+<head>
+    <style>
+        @media screen and (min-width: 600px) {
+            body {
+                transition: 1s 2000ms;
+                background-color: blue;
+            }
+            .large-device {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                transition: 1s 2000ms;
+                background-color: red;
+            }
+            .large-device {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 900px) {
+            body {
+                transition: 1s 2000ms;
+                background-color: greenyellow;
+            }
+            .large-device {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="large-device">
+        <h1>Ini Teks Ukuran Besar</h1>
+    </div>
+
+</body>
