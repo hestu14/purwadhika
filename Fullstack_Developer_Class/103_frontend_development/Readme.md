@@ -42,3 +42,11 @@
 - React Firebase Database Storage
 - React Firebase Authentication
 - React Redux
+
+## Additional References
+
+- CSS Flex [http://www.csstutorial.org/flex-both.html](http://www.csstutorial.org/flex-both.html)
+- CSS Grid [https://learncssgrid.com/](https://learncssgrid.com/)
+- Explanation CSS Float vs. Flex vs. Grid 
+  - [https://www.youtube.com/watch?v=hYJvxsgnGMA](https://www.youtube.com/watch?v=hYJvxsgnGMA)
+  - [https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s](https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s)
