@@ -46,7 +46,9 @@
 ## Additional References
 
 - CSS Flex [http://www.csstutorial.org/flex-both.html](http://www.csstutorial.org/flex-both.html)
-- CSS Grid [https://learncssgrid.com/](https://learncssgrid.com/)
-- Explanation CSS Float vs. Flex vs. Grid 
+- CSS Grid Tutorial 1 [https://learncssgrid.com/](https://learncssgrid.com/)
+- CSS Grid Tutorial 2 [http://www.csstutorial.org/css-grid-tutorial.html](http://www.csstutorial.org/css-grid-tutorial.html)
+- CSS Flex Generator [http://www.csstutorial.org/flex-generator.html](http://www.csstutorial.org/flex-generator.html)
+- Explanation CSS Float vs. Flex vs. Grid
   - [https://www.youtube.com/watch?v=hYJvxsgnGMA](https://www.youtube.com/watch?v=hYJvxsgnGMA)
   - [https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s](https://www.youtube.com/watch?v=R7gqJkdc5dM&t=0s)
