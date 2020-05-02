@@ -12,6 +12,7 @@ Anda akan belajar selama 6 bulan melalui sesi kelas bagaimana membangun aplikasi
 - JavaScript [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
 - jQuery [https://www.w3schools.com/jquery/default.asp](https://www.w3schools.com/jquery/default.asp)
 - CSS Bootstrap [https://www.w3schools.com/bootstrap/bootstrap_ver.asp](https://www.w3schools.com/bootstrap/bootstrap_ver.asp)
+- React [https://www.w3schools.com/react/default.asp](https://www.w3schools.com/react/default.asp)
 
 > Practice is the hardest part of learning, and training is the essence of transformation. *-Ann Voskamp*
 
