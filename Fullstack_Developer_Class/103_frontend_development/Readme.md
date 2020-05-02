@@ -9,22 +9,21 @@
 
 ## Session_2: JavaScript Library & CSS Library
 
-- jQuery Basic
+- **jQuery Basic**. jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers
 - jQuery DOM Animation
-- Bootstrap 3
-- Bootstrap 4
-- Materialize
+- **Bootstrap 4**, Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+- **Materialize** is A modern responsive front-end framework based on Material Design
 
 ## Session_3: ReactJS Fundamental
 
-- ReactJS Component
+- ReactJS Component. Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
 - ReactJS Basic Dev
 
 ## Session_4: ReactJS UI Framework
 
-- PrimeReact
-- Material-UI
-- React Reveal
+- **PrimeReact** is a collection of rich UI components for React. All widgets are open source and free to use under MIT License
+- **Material-UI** is React components for faster and easier web development. Build your own design system, or start with Material Design
+- **React Reveal** is high performance animation library for React
 
 ## Session_5: ReactJS Consuming Web API
 
@@ -41,7 +40,7 @@
 
 - React Firebase Database Storage
 - React Firebase Authentication
-- React Redux
+- **React Redux** is Official React bindings for Redux. Redux is A Predictable State Container for JS Apps
 
 ## Additional References
 
