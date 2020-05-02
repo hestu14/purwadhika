@@ -1,6 +1,6 @@
 # Purwadhika Coding School
 
-## Purwadhika 6 Bulan Part-Time Training
+## Part-Time Training
 
 Anda akan belajar selama 6 bulan melalui sesi kelas bagaimana membangun aplikasi web front-end menggunakan ReactJS, aplikasi back-end menggunakan teknologi NodeJS, dan aplikasi Android menggunakan React Native.
 

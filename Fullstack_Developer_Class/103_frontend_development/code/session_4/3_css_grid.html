@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Using Grid And Semantic Elements</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            /* width: 100vw; */
+            min-height: 100vh;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: 70px auto 70px;
+            grid-template-columns: 200px auto;
+            grid-template-areas:
+                "a a"
+                "b c"
+                "d d";
+        }
+
+        header {
+            grid-area: a;
+            background-color: bisque;
+            padding: 1rem;
+        }
+
+        aside {
+            grid-area: b;
+            background-color: lightskyblue;
+            padding: 1rem;
+        }
+
+        article {
+            grid-area: c;
+            background-color: rgb(185, 220, 241);
+            padding: 1rem;
+        }
+
+        footer {
+            grid-area: d;
+            background-color: #bada55;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Ini Header</h1>
+        </header>
+
+        <aside>
+            <h3>Ini Sidebar</h3>
+        </aside>
+
+        <article>
+            <h1>What Does WWF Do?</h1>
+            <p>WWF's mission is to stop the degradation of our planet's natural environment,
+                and build a future in which humans live in harmony with nature.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                possimus eius aliquid nesciunt.</p>
+        </article>
+
+        <footer>
+            <h3>Ini Footer</h3>
+            <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Read More About Semantic
+                Element</a>
+        </footer>
+    </div>
+</body>
+
+</html>

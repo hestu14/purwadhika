@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Using Flex And Semantic Elements</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            /* box-sizing: border-box; */
+        }
+
+        .container {
+
+            display: flex;
+            flex-wrap: wrap;
+
+            /* justify-content: space-between; */
+            position: relative;
+        }
+
+        header {
+            flex-basis: 100%;
+            background-color: bisque;
+            padding: 1rem;
+        }
+
+        footer {
+            flex-basis: 100%;
+            background-color: #bada55;
+            padding: 1rem;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            /* flex-wrap: nowrap; */
+            justify-content: space-between;
+        }
+
+        aside {
+            flex-basis: 15%;
+            background-color: lightskyblue;
+            padding: 1rem;
+        }
+
+        article {
+            flex-grow: 1;
+            background-color: rgb(185, 220, 241);
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Ini Header</h1>
+        </header>
+
+        <main>
+            <aside>
+                <h3>Ini Sidebar</h3>
+            </aside>
+
+            <article>
+                <h1>What Does WWF Do?</h1>
+                <p>WWF's mission is to stop the degradation of our planet's natural environment,
+                    and build a future in which humans live in harmony with nature.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere magni eos necessitatibus veniam, cum
+                    laboriosam eligendi voluptas aspernatur recusandae eaque ad explicabo laborum cupiditate aut tenetur
+                    possimus eius aliquid nesciunt.</p>
+            </article>
+        </main>
+
+        <footer>
+            <h3>Ini Footer</h3>
+            <a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Read More About Semantic
+                Element</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>
