@@ -1,42 +1,42 @@
 # Frontend Development Class
 
-## Session_1: HTML & CSS
+## Chapter_1: HTML & CSS
 
 - HTML
 - CSS Basic
 - CSS Layouting
 - CSS Grid
 
-## Session_2: JavaScript Library & CSS Library
+## Chapter_2: JavaScript Library & CSS Library
 
 - **jQuery Basic**. jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers
 - jQuery DOM Animation
 - **Bootstrap 4**, Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
 - **Materialize** is A modern responsive front-end framework based on Material Design
 
-## Session_3: ReactJS Fundamental
+## Chapter_3: ReactJS Fundamental
 
 - ReactJS Component. Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
 - ReactJS Basic Dev
 
-## Session_4: ReactJS UI Framework
+## Chapter_4: ReactJS UI Framework
 
 - **PrimeReact** is a collection of rich UI components for React. All widgets are open source and free to use under MIT License
 - **Material-UI** is React components for faster and easier web development. Build your own design system, or start with Material Design
 - **React Reveal** is high performance animation library for React
 
-## Session_5: ReactJS Consuming Web API
+## Chapter_5: ReactJS Consuming Web API
 
 - React JS API
 - JSON-Server Fake API
 
-## Session_6: Deploying ReactJS
+## Chapter_6: Deploying ReactJS
 
 - React Deploy to Heroku
 - React Deploy to Netlify
 - React Deploy to Firebase Hosting
 
-## Session_7: ReactJS Cloud Integration
+## Chapter_7: ReactJS Cloud Integration
 
 - React Firebase Database Storage
 - React Firebase Authentication
